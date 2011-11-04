@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /macros/latex/contrib/mathexam
+# catalog-date 2008-08-22 15:19:59 +0200
+# catalog-license lppl
+# catalog-version 1.00
 Name:		texlive-mathexam
 Version:	1.00
 Release:	1
@@ -51,6 +57,7 @@ for students to put their name.
 #- source
 %doc %{_texmfdistdir}/source/latex/mathexam/mathexam.dtx
 %doc %{_texmfdistdir}/source/latex/mathexam/mathexam.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -61,3 +68,5 @@ for students to put their name.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
