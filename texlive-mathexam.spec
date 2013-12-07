@@ -6,7 +6,7 @@
 # catalog-version 1.00
 Name:		texlive-mathexam
 Version:	1.00
-Release:	4
+Release:	5
 Summary:	Package for typesetting exams
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/mathexam
