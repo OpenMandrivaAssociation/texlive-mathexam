@@ -1,19 +1,13 @@
-# revision 15878
-# category Package
-# catalog-ctan /macros/latex/contrib/mathexam
-# catalog-date 2008-08-22 15:19:59 +0200
-# catalog-license lppl
-# catalog-version 1.00
 Name:		texlive-mathexam
-Version:	1.00
-Release:	11
+Version:	15878
+Release:	1
 Summary:	Package for typesetting exams
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/mathexam
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mathexam.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mathexam.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mathexam.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mathexam.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mathexam.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mathexam.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -30,12 +24,12 @@ and footers, and will let you include instructions and space
 for students to put their name.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -50,24 +44,11 @@ for students to put their name.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.00-2
-+ Revision: 753777
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.00-1
-+ Revision: 718972
-- texlive-mathexam
-- texlive-mathexam
-- texlive-mathexam
-- texlive-mathexam
-
