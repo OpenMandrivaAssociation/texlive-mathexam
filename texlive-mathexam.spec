@@ -1,6 +1,6 @@
 Name:		texlive-mathexam
 Version:	15878
-Release:	1
+Release:	2
 Summary:	Package for typesetting exams
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/mathexam
