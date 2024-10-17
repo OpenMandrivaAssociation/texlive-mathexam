@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	Package for typesetting exams
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/mathexam
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/mathexam
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mathexam.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mathexam.doc.r%{version}.tar.xz
